@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/first"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/navi_item_home"
+            android:checked="true"
+            android:icon="@drawable/ic_explore_white_24dp"
+            android:title="@string/menu_topics" />
+        <item
+            android:id="@+id/navi_item_active"
+            android:icon="@drawable/ic_people_white_24dp"
+            android:title="@string/menu_active" />
+
+        <item
+            android:icon="@drawable/ic_create_white_24dp"
+            android:id="@+id/navi_item_post"
+            android:title="@string/menu_post" />
+    </group>
+
+    <group
+        android:id="@+id/second"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/navi_item_settings"
+            android:title="@string/menu_settings" />
+    </group>
+
+
+</menu>

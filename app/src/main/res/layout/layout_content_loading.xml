@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <include android:id="@+id/progress"
+                 layout="@layout/layout_loading"
+                 android:layout_width="80dp"
+                 android:layout_height="80dp"
+                 android:layout_centerHorizontal="true"/>
+
+        <TextView android:id="@+id/msg"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/progress"
+                  android:layout_centerHorizontal="true"
+                  android:text="@string/loading"/>
+    </RelativeLayout>
+
+    <TextView android:id="@+id/retry"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:text="@string/footer_retry"
+              android:textSize="18sp"
+              android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_empty_content"
+        android:visibility="gone"/>
+
+</merge>

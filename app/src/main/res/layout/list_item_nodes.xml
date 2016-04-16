@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:paddingLeft="@dimen/page_left_right_margin"
+              android:paddingRight="@dimen/page_left_right_margin">
+
+    <TextView
+        android:id="@+id/list_item_nodes_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:textSize="@dimen/text_size_large"/>
+
+    <com.wefika.flowlayout.FlowLayout
+        android:id="@+id/list_item_nodes_flowlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|start"/>
+
+</LinearLayout>

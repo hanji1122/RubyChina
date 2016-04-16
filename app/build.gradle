@@ -1,0 +1,80 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    compileSdkVersion 23
+    buildToolsVersion '23.0.3'
+
+    defaultConfig {
+        applicationId "com.luckyhan.rubychina"
+        minSdkVersion 11
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0.0"
+        renderscriptTargetApi 20
+        renderscriptSupportModeEnabled true
+        ndk {
+            abiFilters 'armeabi' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+    }
+    sourceSets {
+        main.jniLibs.srcDirs = ['libs']
+    }
+    lintOptions {
+        abortOnError false
+    }
+    signingConfigs {
+        config {
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+            storeFile file('../../keys/rubychina.jks')
+            storePassword RELEASE_STORE_PASSWORD
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            zipAlignEnabled true
+            signingConfig signingConfigs.config
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/maven/com.squareup.okio/okio/pom.xml'
+        exclude 'META-INF/maven/com.squareup.okio/okio/pom.properties'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    compile 'com.android.support:design:23.2.1'
+    compile 'com.android.support:recyclerview-v7:23.2.1'
+    compile 'com.yqritc:recyclerview-flexibledivider:1.2.6'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'me.relex:circleindicator:1.1.8@aar'
+    compile 'com.google.code.gson:gson:2.4'
+    compile 'de.hdodenhof:circleimageview:1.2.1'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.3'
+    compile 'com.wefika:flowlayout:0.4.0'
+    compile 'com.github.orhanobut:hawk:1.23'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.pnikosis:materialish-progress:1.5'
+    compile 'me.imid.swipebacklayout.lib:library:1.0.0'
+    compile 'com.squareup.retrofit:retrofit:2.0.0-beta2'
+    compile 'com.squareup.retrofit:converter-gson:2.0.0-beta2'
+    compile 'com.squareup.okhttp:logging-interceptor:2.6.0'
+    compile 'jp.wasabeef:blurry:2.0.0'
+    compile 'com.commit451:PhotoView:1.2.5'
+    compile 'org.ocpsoft.prettytime:prettytime:3.2.7.Final'
+    compile 'com.owater.library:CircleTextViewlibrary:0.8.3'
+    compile 'com.squareup:tape:1.2.3'
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.1.14'
+    compile 'com.tencent.bugly:crashreport:2.1'
+    compile 'com.pgyersdk:sdk:2.3.0'
+    compile 'org.jodd:jodd-lagarto:3.7'
+
+}

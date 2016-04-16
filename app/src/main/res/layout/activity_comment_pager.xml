@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+
+    <android.support.v4.widget.SwipeRefreshLayout android:id="@+id/swipe_container"
+                                                  android:layout_width="match_parent"
+                                                  android:layout_height="match_parent">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:orientation="vertical">
+
+            <TextView android:id="@+id/title"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:background="@color/nav_light_color"
+                      android:ellipsize="end"
+                      android:paddingBottom="@dimen/dimens_10dp"
+                      android:paddingLeft="@dimen/dimens_15dp"
+                      android:paddingRight="@dimen/dimens_15dp"
+                      android:paddingTop="@dimen/dimens_10dp"
+                      android:singleLine="true"
+                      android:textSize="22sp"
+                      android:textStyle="bold"
+                      tools:text="This is title of topic"/>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

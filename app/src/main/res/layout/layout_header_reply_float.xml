@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@android:color/white"
+              android:clickable="true"
+              android:orientation="vertical">
+
+    <TextView android:id="@+id/tv_reply_count_float"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:padding="@dimen/dimens_15dp"
+              android:textSize="16sp"
+              tools:text="全部回复"/>
+
+    <View style="@style/Divider"
+          android:layout_marginLeft="@dimen/dimens_10dp"
+          android:layout_marginRight="@dimen/dimens_10dp"/>
+
+</LinearLayout>

@@ -1,0 +1,135 @@
+<resources>
+
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!--<item name="android:colorPrimary">@color/actionbar</item>-->
+        <!--<item name="android:colorPrimaryDark">@color/actionbar</item>-->
+        <item name="colorPrimary">@color/actionbar</item>
+        <item name="colorPrimaryDark">@color/actionbar</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/white</item>
+        <!--<item name="android:windowActionModeOverlay">true</item>-->
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionModeBackground">@color/actionbar</item>
+        <item name="actionBarPopupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="android:alertDialogTheme">@style/RubyChinaDialogTheme</item>
+        <item name="alertDialogTheme">@style/RubyChinaDialogTheme</item>
+    </style>
+
+    <style name="RubyChinaDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorPrimary">@color/actionbar</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="AppTheme" parent="@style/AppBaseTheme">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionModeBackground">@color/actionbar</item>
+        <item name="actionBarPopupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+    </style>
+
+    <style name="AppTheme.Main" parent="@style/AppBaseTheme">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+
+    <style name="AppTheme.Black" parent="@style/AppTheme">
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:colorPrimary">@android:color/black</item>
+        <item name="android:colorPrimaryDark">@android:color/black</item>
+        <item name="colorPrimary">@android:color/black</item>
+        <item name="colorPrimaryDark">@android:color/black</item>
+    </style>
+
+    <style name="AppTheme.UserCenter" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="windowActionModeOverlay">true</item>
+
+        <item name="android:colorPrimary">@color/actionbar</item>
+        <item name="android:colorPrimaryDark">@android:color/transparent</item>
+        <item name="colorPrimary">@color/actionbar</item>
+        <item name="colorPrimaryDark">@color/actionbar</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <style name="ToolbarStyle" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="ToolbarStyle2" parent="@style/Theme.AppCompat.Light.NoActionBar">
+
+    </style>
+
+    <style name="RubyChinaTabLayout" parent="Widget.Design.TabLayout">
+        <!--<item name="tabMaxWidth">@dimen/tab_max_width</item>-->
+        <item name="tabMaxWidth">264dp</item>
+        <item name="tabIndicatorColor">@android:color/white</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabPaddingStart">12dp</item>
+        <item name="tabPaddingEnd">12dp</item>
+        <item name="tabBackground">?attr/selectableItemBackground</item>
+        <item name="tabTextAppearance">@style/RubyChinaTabLayout.TextAppearance</item>
+        <item name="tabSelectedTextColor">@android:color/white</item>
+    </style>
+
+    <style name="RubyChinaTabLayout.TextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="Widget.RubyChina" parent="Theme.AppCompat.Light"/>
+
+    <style name="Widget.RubyChina.ProgressBar">
+        <item name="android:width">@dimen/progress_size</item>
+        <item name="android:height">@dimen/progress_size</item>
+        <item name="matProg_barColor">@color/colorAccent</item>
+        <item name="matProg_progressIndeterminate">true</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/list_divider</item>
+        <item name="android:background">@color/list_divider</item>
+    </style>
+
+    <style name="Right_Margin">
+        <item name="android:layout_marginRight">15dp</item>
+    </style>
+
+    <style name="None"/>
+
+    <style name="CollapsingToolbarTitleStyle" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@android:color/transparent</item>
+    </style>
+
+    <style name="SettingItem">
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:gravity">center_vertical|start</item>
+        <item name="android:paddingLeft">@dimen/dimens_15dp</item>
+        <item name="android:paddingRight">@dimen/dimens_15dp</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="AboutItem" parent="@style/SettingItem">
+        <item name="android:paddingTop">@dimen/dimens_15dp</item>
+        <item name="android:paddingBottom">@dimen/dimens_15dp</item>
+    </style>
+
+    <style name="SimpleProgressDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+</resources>

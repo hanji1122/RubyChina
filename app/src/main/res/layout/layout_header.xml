@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.luckyhan.rubychina.ui.widget.TopicHeader
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimens_10dp"
+            android:textSize="@dimen/text_size_extra_large"
+            android:textStyle="bold"
+            tools:text="Topic Title"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/dimens_6dp"
+            android:paddingTop="@dimen/dimens_6dp">
+
+            <TextView
+                android:id="@+id/tv_node_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dimens_10dp"
+                android:paddingRight="@dimen/dimens_10dp"
+                tools:text=" Ruby"/>
+
+            <TextView
+                android:id="@+id/tv_topic_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="3分钟前 80次阅读"/>
+
+            <com.luckyhan.rubychina.ui.widget.LikeBounceView
+                android:id="@+id/topic_like_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:duplicateParentState="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:padding="@dimen/dimens_10dp"
+                android:src="@drawable/btn_check_fav"/>
+
+        </LinearLayout>
+
+        <View style="@style/Divider"/>
+
+    </LinearLayout>
+
+    <com.luckyhan.rubychina.widget.FineWebView
+        android:id="@+id/wv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_reply_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimens_15dp"
+        android:textSize="16sp"
+        tools:text="全部回复"/>
+
+</com.luckyhan.rubychina.ui.widget.TopicHeader>

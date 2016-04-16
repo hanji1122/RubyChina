@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.luckyhan.rubychina.widget.SquareFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ContentDescription">
+
+    <com.luckyhan.rubychina.widget.ForegroundImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/selector_image_foreground"
+        android:scaleType="centerCrop"/>
+
+</com.luckyhan.rubychina.widget.SquareFrameLayout>

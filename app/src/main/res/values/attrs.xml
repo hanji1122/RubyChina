@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SettingElement">
+        <attr name="headerText" format="string"/>
+        <attr name="contentText" format="string"/>
+        <attr name="headerTextSize" format="dimension"/>
+        <attr name="contentTextSize" format="dimension"/>
+        <attr name="headerTextColor" format="color"/>
+        <attr name="contentTextColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="ForegroundImageView">
+        <attr name="android:foreground"/>
+    </declare-styleable>
+
+</resources>

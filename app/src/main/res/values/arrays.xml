@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sorting">
+        <item>last_actived</item>
+        <item>recent</item>
+        <item>no_reply</item>
+        <item>popular</item>
+        <item>excellent</item>
+    </string-array>
+    <string-array name="sorting_value">
+        <item>最近更新</item>
+        <item>最新创建</item>
+        <item>暂无回复</item>
+        <item>热门帖子</item>
+        <item>优质帖子</item>
+    </string-array>
+    <string-array name="reply_popup">
+        <item>复制评论</item>
+        <item>回复他</item>
+    </string-array>
+</resources>

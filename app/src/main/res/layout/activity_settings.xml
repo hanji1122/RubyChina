@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:id="@+id/about_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/setting_sorting"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dimens_15dp"
+                android:paddingRight="@dimen/dimens_15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/setting_title_topic_ordering"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/setting_sorting_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:checked="false"
+                    tools:text="最新话题"/>
+
+            </FrameLayout>
+
+            <include layout="@layout/layout_split_line"/>
+
+            <FrameLayout
+                android:id="@+id/setting_browser_pick"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dimens_15dp"
+                android:paddingRight="@dimen/dimens_15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/setting_use_outer_browser"
+                    android:textSize="15sp"/>
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/setting_browser_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:checked="false"/>
+
+            </FrameLayout>
+
+            <include layout="@layout/layout_split_line"/>
+
+            <FrameLayout
+                android:id="@+id/setting_auto_update"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dimens_15dp"
+                android:paddingRight="@dimen/dimens_15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/setting_auto_check_update"/>
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/setting_auto_update_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:checked="true"/>
+
+            </FrameLayout>
+
+            <include layout="@layout/layout_split_line"/>
+
+            <FrameLayout
+                android:id="@+id/fl_check_update"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dimens_15dp"
+                android:paddingRight="@dimen/dimens_15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/setting_update"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/setting_update_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:checked="false"
+                    tools:text="1.0"/>
+
+            </FrameLayout>
+
+            <include layout="@layout/layout_split_line"/>
+
+            <TextView
+                android:id="@+id/setting_rating"
+                style="@style/SettingItem"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="@string/setting_rate"/>
+
+            <include layout="@layout/layout_split_line"/>
+
+            <TextView
+                android:id="@+id/setting_recommend"
+                style="@style/SettingItem"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="@string/setting_recommend"/>
+
+            <include layout="@layout/layout_split_line"/>
+
+            <TextView
+                android:id="@+id/fl_about"
+                style="@style/SettingItem"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="@string/setting_about"/>
+
+            <include layout="@layout/layout_split_line"/>
+
+            <TextView
+                android:id="@+id/setting_logout"
+                style="@style/SettingItem"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="@string/setting_logout"
+                android:textColor="@color/actionbar"
+                android:visibility="gone"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

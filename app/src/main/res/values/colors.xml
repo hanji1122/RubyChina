@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffffff</color>
+    <color name="actionbar">#E83050</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="color_dark_theme">#ff393941</color>
+    <color name="flow_button_textcolor">#939DAA</color>
+    <color name="list_divider">#ffdddddd</color>
+    <color name="image_foreground">#A6E0E0E0</color>
+    <color name="light_gray">#ababab</color>
+    <color name="nav_light_color">#f2f5f2</color>
+    <color name="color_link">#ff5c93</color>
+    <color name="toolbar_bg_image_viewer">#7F000000</color>
+    <drawable name="occupy_transparent">@android:color/transparent</drawable>
+
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <item
+        android:id="@+id/action_nodes_refresh"
+        android:orderInCategory="0"
+        android:title="@string/menu_refresh"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_nodes_follow_toggle"
+        android:orderInCategory="0"
+        android:title="@string/action_follow"
+        android:visible="false"
+        app:showAsAction="never" />
+
+</menu>
