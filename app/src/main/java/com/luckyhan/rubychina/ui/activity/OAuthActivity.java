@@ -17,6 +17,7 @@ import com.luckyhan.rubychina.model.response.UserResponse;
 import com.luckyhan.rubychina.ui.base.BaseSwipeActivity;
 import com.luckyhan.rubychina.utils.WebViewUtil;
 import com.luckyhan.rubychina.widget.FixedWebView;
+import com.luckyhan.rubychina.widget.SimpleLoadingDialog;
 import com.orhanobut.hawk.Hawk;
 import com.tencent.bugly.crashreport.CrashReport;
 
@@ -29,6 +30,8 @@ import retrofit.Retrofit;
 public class OAuthActivity extends BaseSwipeActivity {
 
     @Bind(R.id.webPage) FixedWebView mWebPageView;
+
+    private SimpleLoadingDialog mSimpleLoadingDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,15 +52,21 @@ public class OAuthActivity extends BaseSwipeActivity {
             @Override
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
                 super.onPageStarted(view, url, favicon);
-                //sign in and reload
-                if (url.equals("https://www.ruby-china.org/")) {
-                    mWebPageView.loadUrl(OAuthRequest.getAuthorizeUrl());
+                if (mSimpleLoadingDialog == null) {
+                    mSimpleLoadingDialog = SimpleLoadingDialog.show(getContext(), true);
+                } else {
+                    mSimpleLoadingDialog.show();
                 }
-                //get authorize code from the redirected url and transfer back to MainActivity
-                if (url.contains("code=")) {
+                if (url.startsWith("https://ruby-china.org/?code=")) {
                     String code = url.split("=")[1];
                     requestToken(code);
                 }
+            }
+
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                super.onPageFinished(view, url);
+                mSimpleLoadingDialog.dismiss();
             }
         });
     }
@@ -133,5 +142,8 @@ public class OAuthActivity extends BaseSwipeActivity {
     protected void onDestroy() {
         super.onDestroy();
         WebViewUtil.flushWebView(getContext());
+        if (mSimpleLoadingDialog != null) {
+            mSimpleLoadingDialog.dismiss();
+        }
     }
 }
