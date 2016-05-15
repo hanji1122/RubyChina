@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.NavigationView;
@@ -22,7 +21,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.luckyhan.rubychina.R;
+import com.luckyhan.rubychina.RubyChinaApp;
 import com.luckyhan.rubychina.api.request.OAuthRequest;
 import com.luckyhan.rubychina.api.request.UserRequest;
 import com.luckyhan.rubychina.data.DataUtils;
@@ -38,7 +39,6 @@ import com.luckyhan.rubychina.utils.AppUtils;
 import com.luckyhan.rubychina.utils.ImgLoader;
 import com.luckyhan.rubychina.utils.SharedPrefUtil;
 import com.luckyhan.rubychina.utils.ToastUtils;
-import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
 import com.orhanobut.hawk.Hawk;
 import com.pgyersdk.javabean.AppBean;
 import com.pgyersdk.update.PgyUpdateManager;
@@ -50,7 +50,7 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import de.hdodenhof.circleimageview.CircleImageView;
-import jp.wasabeef.blurry.Blurry;
+import jp.wasabeef.glide.transformations.BlurTransformation;
 import retrofit.Callback;
 import retrofit.Response;
 import retrofit.Retrofit;
@@ -179,23 +179,10 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             return;
         }
         mUserName.setText(user.login);
-        ImgLoader.INSTANCE.displayAvatarImage(user.avatar_url, mUserAvatar, new SimpleImageLoadingListener() {
-            @Override
-            public void onLoadingComplete(String imageUri, View view, Bitmap loadedImage) {
-                super.onLoadingComplete(imageUri, view, loadedImage);
-                mUserAvatar.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        Blurry.with(getContext())
-                                .radius(10)
-                                .sampling(3)
-                                .async()
-                                .capture(mUserAvatar)
-                                .into(mBlurUserView);
-                    }
-                });
-            }
-        });
+        ImgLoader.INSTANCE.displayAvatarImage(user.avatar_url, mUserAvatar);
+        Glide.with(RubyChinaApp.getContext()).load(user.avatar_url)
+                .bitmapTransform(new BlurTransformation(getContext()))
+                .into(mBlurUserView);
     }
 
     private void requestRefreshToken(String refresh_token) {

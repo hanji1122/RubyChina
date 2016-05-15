@@ -11,6 +11,14 @@
         android:src="@drawable/drawer_user_bg"
         android:scaleType="centerCrop" />
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#64000000"
+        android:fitsSystemWindows="true"
+        android:scaleType="centerCrop"
+        android:tint="#11000000"/>
+
     <RelativeLayout
         android:id="@+id/drawer_header_container"
         android:layout_width="match_parent"
