@@ -153,6 +153,12 @@
     </string>
     <string name="share_topic_content">https://ruby-china.org/topics/%1$s</string>
     <string name="update_release_notes">版本: %1$s\n\n%2$s</string>
+    <string name="dialog_msg_permission_request">为正常使用，应用需要以下权限：存储空间。请允许授权 !</string>
+    <string name="next_step">下一步</string>
+    <string name="dialog_msg_permission_request_fail">请允许获取权限，否则应用将无法正常使用 !</string>
+    <string name="dialog_msg_permission_go_setting">
+        <![CDATA[无法获取必要权限，请进入系统设置开启权限再使用，设置路径：\n\n设置->应用程序->RubyChina->权限]]></string>
+    <string name="dialog_go_setting">去设置</string>
 
     <string-array name="select_at_user">
         <item>关注</item>

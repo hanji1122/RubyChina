@@ -32,7 +32,6 @@ import com.luckyhan.rubychina.model.Node;
 import com.luckyhan.rubychina.model.Token;
 import com.luckyhan.rubychina.model.User;
 import com.luckyhan.rubychina.model.response.UserResponse;
-import com.luckyhan.rubychina.ui.base.BaseActivity;
 import com.luckyhan.rubychina.ui.fragment.ActiveUserFragment;
 import com.luckyhan.rubychina.ui.fragment.TopicTabsFragment;
 import com.luckyhan.rubychina.utils.AppUtils;
@@ -55,7 +54,7 @@ import retrofit.Callback;
 import retrofit.Response;
 import retrofit.Retrofit;
 
-public class MainActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
+public class MainActivity extends PermissionCheckBaseActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
     public static final int REQUEST_LOGIN = 11;
     public static final int REQUEST_CHANGE_NODES = 22;
